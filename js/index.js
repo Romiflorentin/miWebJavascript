@@ -1,52 +1,69 @@
-// Carrito de Compras
-
-function carritoDecompra() {
-    let celular = prompt("Ingrese un Modelo de Celular")
-    switch (celular) {
-        case "samsungA33":
-            console.log("usted añadió al carrito  un samsungA33");
-            break;
-
-        case "samsungS24":
-            console.log("usted añadió al carrito  un samsungS24");
-            break;
-
-        case "samsungA54":
-            console.log("usted añadió al carrito  un samsungA54");
-            break;
-
-        case "samsungS21":
-            console.log("usted añadió al carrito  un samsungS21");
-            break;
-
-        case "samsungZflip5":
-            console.log("usted añadió al carrito  un samsungZflip5");
-            break;
-
-        default:
-            console.log("Opcion invalida!");
-            break;
+/// Objetos
+class Celular {
+    constructor(marca, modelo, memoriaRam, precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.memoriaRam = memoriaRam;
+        this.precio = precio;
     }
-};
-carritoDecompra()
 
-//calcular total de Carrito
-
-const productos = [
-    { nombre: "samsungA33", precio: 1000 },
-    { nombre: "samsungS24", precio: 1200 },
-    { nombre: "samsungA54", precio: 1400 },
-    { nombre: "samsungS21", precio: 1600 },
-    { nombre: "samsungZflip5", precio: 1800 }
-];
-function sumarPrecios(productos) {
-    let total = 0;
-    for (const producto of productos) {
-        total += producto.precio;
+    mostrarInfo() {
+        return `Marca: ${this.marca}, Modelo: ${this.modelo}, Memoria RAM: ${this.memoriaRam}, Precio: $${this.precio}`;
     }
-    return total;
+
+    aplicarDescuento(porcentaje) {
+        return this.precio - (this.precio * (porcentaje / 100));
+    }
+
+    mostrarInfoConDescuento(porcentaje) {
+        const precioConDescuento = this.aplicarDescuento(porcentaje);
+        return `${this.mostrarInfo()}, Precio con Descuento: $${precioConDescuento.toFixed(2)}`;
+    }
+    calcularPrecioConIVA() {
+        const IVA = 0.21;
+        return this.precio * (1 + IVA);
+    }
+
+    mostrarInfoConIVA() {
+        const precioConIVA = this.calcularPrecioConIVA();
+        return `${this.mostrarInfo()}, Precio con IVA: $${precioConIVA.toFixed(2)}`;
+    }
 }
-const precioTotal = sumarPrecios(productos);
-console.log(`El precio total de los productos es: $${precioTotal}`);
+const celular1 = new Celular("Samsung", "A33", "14Gb", 300000);
+const celular2 = new Celular("Samsung", "S24", "16Gb", 250000)
+const celular3 = new Celular("Samsung", "A54", "32Gb", 350000)
+const celular4 = new Celular("Samsung", "S21", "8Gb", 150000)
+const celular5 = new Celular("Samsung", "Z Flit", "14Gb", 400000)
+console.log(celular1.mostrarInfoConIVA()); /// muestra info del producto (precio mas iva)
+console.log(celular2.mostrarInfoConDescuento(10)); /// muestra info del producto (precio con descuento)
 
-sumarPrecios()
+
+/// Arrays
+const stock = [
+    new Celular("Samsung", "A33", "14Gb", 300000),
+    new Celular("Samsung", "S24", "16Gb", 250000),
+    new Celular("Samsung", "A54", "32Gb", 350000),
+    new Celular("Samsung", "S21", "8Gb", 150000),
+    new Celular("Samsung", "Z Flit", "14Gb", 400000)
+];
+
+// stock.forEach(celular => {
+//     console.log(celular.mostrarInfo());
+// });
+const otrosCelulares = [
+    new Celular("Apple", "iPhone 13", "6Gb", 800000),
+    new Celular("Xiaomi", "Mi 11", "8Gb", 500000)
+];
+const todosLosCelulares = stock.concat(otrosCelulares);
+// console.log(todosLosCelulares);
+
+/// Funciones
+function mostrarStock() {
+    stock.forEach(celular => {
+        console.log(celular.mostrarInfo());
+    });
+}
+mostrarStock()
+
+const mejorPrecio = stock.filter(Celular => Celular.precio < 300000)
+console.log(mejorPrecio)
