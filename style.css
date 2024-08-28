@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  transition: background-color 0.5s, color 0.5s;
+  /* color: white; */
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+}
+#toggle {
+  display: none;
+}
+#label_toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3em;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: 8px;
+  gap: 5px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 90%);
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  justify-content: space-between;
+}
+h1 {
+  font-size: 15px;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+.logoheader {
+  display: flex;
+  width: 13%;
+  align-items: center;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background-color: #111;
+}
+.card {
+  margin: 10px;
+}
+.pie {
+  /* background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%); */
+  /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+}
+img {
+  width: 15%;
+  padding-left: 5px;
+}
+.logo {
+  display: flex;
+  /* align-items: flex-end; */
+  text-align: center;
+  gap: 10px;
+  padding-top: 15px;
+  padding-left: 2%;
+}
+.logotipo {
+  font-size: 20px;
+  /* color: rgb(0, 0, 0); */
+  /* padding-bottom: 10px; */
+}
+
+span {
+  font-size: 25px;
+  margin: 5px;
+  margin-right: 5px;
+}
+.wh {
+  background-color: rgba(4, 168, 78, 0.952);
+  padding: 8px;
+  padding-top: 5px;
+  border-radius: 50%;
+  color: white;
+}
+.ig {
+  background-color: rgba(219, 52, 150, 0.986);
+  padding: 8px;
+  padding-top: 5px;
+  border-radius: 50%;
+  color: white;
+}
+.fb {
+  background-color: rgb(52, 52, 170);
+  padding: 8px;
+  padding-top: 5px;
+  border-radius: 50%;
+  color: white;
+}
+.yt {
+  background-color: rgb(247, 7, 7);
+  padding: 8px;
+  padding-top: 5px;
+  border-radius: 50px;
+  color: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.logotipo {
+  font-size: 20px;
+
+  /* color: rgb(0, 0, 0); */
+  /* padding-bottom: 10px; */
+}
+.seccion {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  padding-left: 15px;
+}
+.seccion.div {
+  display: flex;
+  flex-direction: column;
+}
+.mediosDePago {
+  width: 400px;
+  margin: 10px;
+  /* align-items: center;
+  justify-content: space-around; */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 15px;
+}
+input {
+  background: none;
+  border: solid 2px rgb(14, 10, 10);
+  padding: 8px;
+  border-radius: 8px;
+}
+button {
+  padding: 10px 20px;
+  background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+  border-radius: 8px;
+}
+.derechos {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #999393;
+}
