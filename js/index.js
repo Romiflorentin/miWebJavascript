@@ -46,31 +46,31 @@ const productos = [
     {
         id: 1,
         nombre: 'Samsung A33',
-        img: '/assets/producto/A33.jpg',
+        img: './assets/producto/A33.jpg',
         precio: 300000,
     },
     {
         id: 2,
         nombre: 'Samsung S24',
-        img: '/assets/producto/S24.jpg',
+        img: './assets/producto/S24.jpg',
         precio: 250000,
     },
     {
         id: 3,
         nombre: 'Samsung A54',
-        img: '/assets/producto/A54.jpg',
+        img: './assets/producto/A54.jpg',
         precio: 350000,
     },
     {
         id: 4,
         nombre: 'Samsung S21',
-        img: '/assets/producto/S21.jpg',
+        img: './assets/producto/S21.jpg',
         precio: 500000,
     },
     {
         id: 5,
         nombre: 'Samsung Z Fold4',
-        img: '/assets/producto/Zfold4.jpg',
+        img: './assets/producto/Zfold4.jpg',
         precio: 550000,
     }
 ];
